@@ -1,0 +1,52 @@
+Privacy Policy
+File Browser · com.filebrowser.app · last updated 6 November 2026
+
+File Browser is a file manager for Android. It lets you open files on the device and on storage servers you own or have access to. This policy explains what the app does with data, in plain terms. It applies to the app and to nothing else.
+
+The short version: the app does not collect, transmit or sell your data. It has no analytics, no advertising, no tracking, no crash reporting and no user accounts. Files and credentials stay on your device, except when you tell the app to connect to a server - and then they go only to that server.
+1. What the app accesses on your device
+Files and folders you choose to browse. The app requests MANAGE_EXTERNAL_STORAGE so it can manage files across folders rather than only inside one directory; it reads and writes only paths you navigate to or select.
+Photos, video and audio (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO) so those files can be listed and opened like any other. The app does not scan, index or upload your media library.
+Network access (INTERNET, ACCESS_NETWORK_STATE) to reach the servers you configure and to report whether a transfer can run.
+Notifications (POST_NOTIFICATIONS) for transfer progress, and a foreground service so a transfer continues while the app is in the background.
+Each of these is used only to do the job you asked for at that moment.
+
+2. Credentials for your servers
+If you add a WebDAV/Nextcloud, SFTP, FTP or SMB connection, the app stores the username and password you enter so it can reconnect without asking again. These are kept in EncryptedSharedPreferences, which encrypts the values with a key held in the Android Keystore, using AES-256-GCM.
+
+Those credentials are sent to the server you configured and to no one else. They are not sent to the developer, and there is no server of ours for them to be sent to. Deleting a connection in the app deletes its stored credentials.
+
+3. What leaves your device
+Only what you instruct the app to send. That means files you copy, move, upload or share, and the requests needed to browse a server you added. Every destination is one you configured yourself.
+
+There is no telemetry. The app contains no analytics SDK, no advertising SDK, no crash-reporting SDK and no attribution library. It makes no request to any server belonging to the developer. Uninstalling the app ends every connection it could make.
+
+4. Data stored on your device
+Saved connections, including the encrypted credentials described above
+Bookmarks, recent locations, and your appearance setting (theme and accent colour)
+The queue of transfers you started
+Copies of files you open in another app, kept in the app's private storage so that app can read them
+All of this lives in the app's private storage on your device. It is not backed up to the developer and is removed when you uninstall the app or clear its data.
+
+5. Sharing
+We do not share your data, because we do not have it. The app has no servers of its own and no way to send information to the developer.
+
+When you use Share or Open with, Android passes the file to the app you picked. That app's own privacy policy then applies to it.
+
+6. Children
+The app is a general-purpose file manager and is not directed at children. It does not knowingly collect information from anyone, of any age.
+
+7. Your control
+Remove a connection to delete its stored credentials and settings
+Revoke storage or notification access at any time in Android Settings
+Clear the app's data or uninstall it to remove everything the app stored
+8. Security
+Credentials are encrypted at rest as described above. Transfers use the security the protocol provides - FTPS, SFTP, HTTPS-based WebDAV, or SMB signing where your server offers it. The app does not add its own encryption layer, and it cannot make an unencrypted server encrypted: if you configure plain FTP, the traffic is plain FTP.
+
+9. Changes
+If this policy changes, the date at the top changes with it. Material changes will be noted in the app's release notes on Google Play.
+
+10. Contact
+Questions about this policy or about data handling in this app: alex.xanthas@gmail.com
+
+File Browser (com.filebrowser.app) · published by Alekos Xanthas · This page is the complete policy; there is no separate document.
